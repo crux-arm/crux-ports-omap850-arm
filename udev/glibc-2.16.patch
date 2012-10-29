@@ -1,0 +1,12 @@
+diff -purN udev-141.orig/udev/udevd.c udev-141/udev/udevd.c
+--- udev-141.orig/udev/udevd.c	2012-10-29 09:44:47.000000000 +0000
++++ udev-141/udev/udevd.c	2012-10-29 09:47:35.000000000 +0000
+@@ -38,7 +38,7 @@
+ #ifdef HAVE_INOTIFY
+ #include <sys/inotify.h>
+ #endif
+-
++#include <sys/resource.h>
+ #include "udev.h"
+ 
+ #define UDEVD_PRIORITY			-4
